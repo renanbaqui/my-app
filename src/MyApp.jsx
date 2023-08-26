@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import {
-  ComboBox,
-  ComboBoxItem,
   Input,
   List,
   StandardListItem,
@@ -16,38 +14,6 @@ const WEATHER_EMOJIS = {
 };
 
 export function MyApp() {
-  const citiesCoordinates = [
-    {
-      name: "London",
-      lat: 51.5,
-      lon: -0.12,
-    },
-    {
-      name: "Los Angeles",
-      lat: 34.05,
-      lon: -118.24,
-    },
-    {
-      name: "New York",
-      lat: 40.71,
-      lon: -74.0,
-    },
-    {
-      name: "Paris",
-      lat: 48.8534,
-      lon: 2.3488,
-    },
-    {
-      name: "Rio de Janeiro",
-      lat: -22.9028,
-      lon: -43.2075,
-    },
-    {
-      name: "Tokyo",
-      lat: 35.6895,
-      lon: 139.6917,
-    },
-  ];
 
   const [listItemLatitude, setListItemLatitude] = useState("51.5085");
   const [listItemLongitude, setListItemLongitude] = useState("-0.1257");
@@ -299,18 +265,6 @@ export function MyApp() {
     cod: "",
   });
 
-  const handleSelectionChange = (event) => {
-    let objectIndex = null;
-    for (let i = 0; i < citiesCoordinates.length; i++) {
-      if (citiesCoordinates[i].name === event.target.value) {
-        objectIndex = i;
-        break;
-      }
-    }
-
-    setListItemLatitude(citiesCoordinates[objectIndex].lat);
-    setListItemLongitude(citiesCoordinates[objectIndex].lon);
-  };
 
   const handleSearchInputChange = async (event) => {
     const searchTerm = event.target.value;
@@ -365,19 +319,6 @@ export function MyApp() {
         onSuggestionItemPreview={function Ma() {}}
         onSuggestionItemSelect={function Ma() {}}
       />
-      <p></p>
-      <ComboBox
-        onInput={function noRefCheck() {}}
-        onSelectionChange={handleSelectionChange}
-        placeholder="Select a City..."
-      >
-        <ComboBoxItem text="London" />
-        <ComboBoxItem text="Los Angeles" />
-        <ComboBoxItem text="New York" />
-        <ComboBoxItem text="Paris" />
-        <ComboBoxItem text="Rio de Janeiro" />
-        <ComboBoxItem text="Tokyo" />
-      </ComboBox>
       <p></p>
       {apiData ? (
         <List
