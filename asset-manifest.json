@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/openweather-api/static/css/main.968b759c.css",
-    "main.js": "/openweather-api/static/js/main.63b17ca7.js",
-    "static/js/787.28cb0dcd.chunk.js": "/openweather-api/static/js/787.28cb0dcd.chunk.js",
-    "index.html": "/openweather-api/index.html",
-    "main.968b759c.css.map": "/openweather-api/static/css/main.968b759c.css.map",
-    "main.63b17ca7.js.map": "/openweather-api/static/js/main.63b17ca7.js.map",
-    "787.28cb0dcd.chunk.js.map": "/openweather-api/static/js/787.28cb0dcd.chunk.js.map"
+    "main.css": "/weather-explorer/static/css/main.968b759c.css",
+    "main.js": "/weather-explorer/static/js/main.15d7f221.js",
+    "static/js/787.28cb0dcd.chunk.js": "/weather-explorer/static/js/787.28cb0dcd.chunk.js",
+    "index.html": "/weather-explorer/index.html",
+    "main.968b759c.css.map": "/weather-explorer/static/css/main.968b759c.css.map",
+    "main.15d7f221.js.map": "/weather-explorer/static/js/main.15d7f221.js.map",
+    "787.28cb0dcd.chunk.js.map": "/weather-explorer/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.968b759c.css",
-    "static/js/main.63b17ca7.js"
+    "static/js/main.15d7f221.js"
   ]
 }
