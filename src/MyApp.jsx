@@ -7,6 +7,10 @@ import {
   StandardListItem,
 } from "@ui5/webcomponents-react";
 
+import { Fragment } from "react";
+import ListGroup from "react-bootstrap/ListGroup";
+import Spinner from "react-bootstrap/Spinner";
+
 const API_KEY = "d76d0ba625e01873300aaf0e0d205280";
 const SUGGESTION_LIMIT = 3;
 const WEATHER_EMOJIS = {
@@ -365,7 +369,7 @@ export function MyApp() {
         onSuggestionItemPreview={function Ma() {}}
         onSuggestionItemSelect={function Ma() {}}
       />
-      <p></p>
+      {/* <p></p>
       <ComboBox
         onInput={function noRefCheck() {}}
         onSelectionChange={handleSelectionChange}
@@ -420,7 +424,56 @@ export function MyApp() {
         </List>
       ) : (
         <div>Loading...</div>
-      )}
+      )} */}
+      <p></p>
+      {/* {apiData ? ( */}
+        <ListGroup>
+          <ListGroup.Item>
+            <strong>Current Weather</strong>
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Location: </strong>
+            {apiData.name}
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Description: </strong>
+            {listWeatherEmoji}&nbsp;{apiData.weather[0].main},&nbsp;
+            {apiData.weather[0].description}
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Temperature: </strong>
+            🌡️&nbsp;{apiData.main.temp} K
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Perception: </strong>
+            🌡️&nbsp;{apiData.main.feels_like} K
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Humidity: </strong>
+            {apiData.main.humidity} %
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Cloudiness: </strong>
+            {apiData.clouds.all} %
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Wind Speed: </strong>
+            {apiData.wind.speed} m/s
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Wind Direction: </strong>
+            {apiData.wind.deg} degrees
+          </ListGroup.Item>
+          <ListGroup.Item>
+            <strong>Timezone: </strong>
+            {apiData.timezone} s from UTC
+          </ListGroup.Item>
+        </ListGroup>
+      {/* // ) : (
+      //   <Spinner animation="border" role="status">
+      //     <span className="sr-only">Loading...</span>
+      //   </Spinner>
+      // )} */}
       <p></p>
       {countriesApiData ? (
         <List

@@ -11,7 +11,9 @@
     "@ui5/webcomponents-fiori": "~1.9.3",
     "@ui5/webcomponents-icons": "~1.9.3",
     "@ui5/webcomponents-react": "^1.7.2",
+    "bootstrap": "^3.4.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.7.2",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
